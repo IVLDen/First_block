@@ -1,18 +1,19 @@
 ﻿
-string [] arr = new string[9]; ;
+string [] arr = new string[4]; ;
 
 // Заполняем массив с клавиатуры
-
-void PutInArr (string [] arr1) {
-
     Console.WriteLine ("Заполните массив 10 строками символов");
-
-     for (int i = 0; i < arr1.Length; i++){
-
-     arr1[i] = Console.ReadLine();
+    string s;
+    
+     for (int i = 0; i < arr.Length; i++){
      
+     s = Console.ReadLine();
+     
+     arr[i] = s;
      }
-     }
+
+  
+     
 
 // Отобразим полученные строки
 void ShowArr (string [] arr2) {
@@ -28,15 +29,19 @@ void ShowArr (string [] arr2) {
 
 void ShowStrings (string [] arr3) {
 
+ Console.WriteLine ("Строки содержащие 3 или мнее символов");
      for (int i = 0; i < arr3.Length; i++){
 
-        if ()
-
+        if (arr3[i].Length == 3 || arr3[i].Length < 3)
+        Console.WriteLine ($"{arr3[i]} - элемент № {i} в массиве ");
+        }
 }
 
 
 
-PutInArr(arr);
-Console.ReadLine();
-Console.ReadLine();
+Console.WriteLine();
+Console.WriteLine();
 ShowArr(arr);
+Console.WriteLine();
+Console.WriteLine();
+ShowStrings(arr);
